@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
   <%= link_to 'Exams App', root_path, class:"navbar-brand" %>
 
@@ -12,6 +12,15 @@
       <li class="nav-item">
         <%= link_to 'About Us', home_about_path, class:"nav-link" %>
       </li>
+
+      <li class="nav-item">
+        <%= link_to 'All Exams', exams_path, class:"nav-link" %>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to 'Add Exam', new_exam_path, class:"nav-link" %>
+      </li>
+
       <li class="nav-item dropdown"> 
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Years

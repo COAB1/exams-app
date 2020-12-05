@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @exam.date %>
+</p>
+
+<p>
+  <strong>Glicose:</strong>
+  <%= @exam.glicose %>
+</p>
+
+<p>
+  <strong>Triglycerides:</strong>
+  <%= @exam.triglycerides %>
+</p>
+
+<p>
+  <strong>Cholesterol:</strong>
+  <%= @exam.cholesterol %>
+</p>
+
+<%= link_to 'Edit', edit_exam_path(@exam) %> |
+<%= link_to 'Back', exams_path %>
