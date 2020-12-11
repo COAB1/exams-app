@@ -1,24 +1,27 @@
 <p id="notice"><%= notice %></p>
 
+<div class="jumbotron">
+<h1 class="display-4"><%= @exam.date %></h1>
+<hr class="my-4">
 <p>
-  <strong>Date:</strong>
-  <%= @exam.date %>
+<strong>Glicose:</strong>
+<%= @exam.glicose %>
+</p>
+<p>
+<strong>Triglycerides:</strong>
+<%= @exam.triglycerides %>
 </p>
 
 <p>
-  <strong>Glicose:</strong>
-  <%= @exam.glicose %>
+<strong>Cholesterol:</strong>
+<%= @exam.cholesterol %>
 </p>
+<br/>
+<%= link_to 'Edit', edit_exam_path(@exam), class:"btn btn-secondary" %> 
+<%= link_to 'Back', exams_path, class:"btn btn-outline-secondary" %>
 
-<p>
-  <strong>Triglycerides:</strong>
-  <%= @exam.triglycerides %>
-</p>
+</div>
 
-<p>
-  <strong>Cholesterol:</strong>
-  <%= @exam.cholesterol %>
-</p>
 
-<%= link_to 'Edit', edit_exam_path(@exam) %> |
-<%= link_to 'Back', exams_path %>
+
+

@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :date %>
-    <%= form.text_field :date %>
+    <%= form.text_field :date, class:"form-control", placeholder:"dd/mm/aaaa" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :glicose %>
-    <%= form.text_field :glicose %>
+    <%= form.text_field :glicose, class:"form-control", placeholder:"Glicose" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :triglycerides %>
-    <%= form.text_field :triglycerides %>
+    <%= form.text_field :triglycerides, class:"form-control", placeholder:"Triglycerides" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :cholesterol %>
-    <%= form.text_field :cholesterol %>
+    <%= form.text_field :cholesterol, class:"form-control", placeholder:"Cholesterol" %>
   </div>
-
+<br/>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-secondary" %>
   </div>
 <% end %>
