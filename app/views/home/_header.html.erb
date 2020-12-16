@@ -13,25 +13,49 @@
         <%= link_to 'About Us', home_about_path, class:"nav-link" %>
       </li>
 
-      <li class="nav-item">
-        <%= link_to 'All Exams', exams_path, class:"nav-link" %>
-      </li>
-
-      <li class="nav-item">
+      <% if user_signed_in? %>
+        <li class="nav-item">
         <%= link_to 'Add Exam', new_exam_path, class:"nav-link" %>
-      </li>
+        </li>
 
-      <li class="nav-item dropdown"> 
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Years
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
+        <li class="nav-item">
+        <%= link_to 'All Exams', exams_path, class:"nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to 'Edit Profile', edit_user_registration_path, class:"nav-link" %>
+        </li>
+
+        <li class="nav-item dropdown"> 
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Years
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+
+      <% else %>
+        <li class="nav-item">
+          <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+        </li>
+
+        
+      <% end %>
+      
+
+      
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
