@@ -30,6 +30,11 @@
     <%= form.label :cholesterol %>
     <%= form.text_field :cholesterol, class:"form-control", placeholder:"Cholesterol" %>
   </div>
+
+  <div class="field form-group">
+    <%= form.number_field :user_id, id: :exam_user_id, class:"form-control", value:current_user.id, type: :hidden %>
+  </div>
+
 <br/>
   <div class="actions">
     <%= form.submit class:"btn btn-secondary" %>
